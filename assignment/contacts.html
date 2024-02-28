@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #FF7F50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:peachpuff;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a.right {
+  float: right;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+</style>
+</head>
+
+<body>
+    <div class="navbar">  
+        <a href="index.html" class="active" style="text-decoration: none;color: aqua;">HOME</a>
+        <a href="animalsinsrilanka.html" class="active" style="text-decoration: none;color: aqua;">ANIMALS IN SRI LANKA</a>
+        <a href="aboutus.html" class="active" style="text-decoration: none;color:aqua ;">ABOUT US</a>
+        <a href="clinic.html" class="active" style="text-decoration: none;color:aqua;">CLINIC</a>
+        <a href="ourprojects.html" class="active" style="text-decoration: none;color: aqua;">OUR PROJECTS</a>
+        <a href="contacts.html" class="active" style="text-decoration: none;color: aqua;">CONTACTS</a>
+   </div>
+<h2>Responsive Contact Section</h2>
+<p>Caring for your canine companion in Mihiripenna Thalpe <br> contact us for expert veterinary care!</p>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Contact our Mihiripenna Thalpe clinic today!</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="assets/DOG CARE/dcc.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="tele">Telephone Number</label>
+        <input type="text" id="tele" name="telephonenumber" placeholder="Telephone number..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="srilanka">Sri Lanka</option>
+          <option value="germany">Germany</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
