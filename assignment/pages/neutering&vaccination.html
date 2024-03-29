@@ -66,7 +66,7 @@ html {
 
 
 .container {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         display: grid;
         gap: 20px;
       }
@@ -85,31 +85,31 @@ html {
         }
       }
 
-      /* 768-991 == 3 cards */
+      /* 768-991 == 2 cards */
       @media screen and (min-width: 768px) and (max-width: 991px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* 992-1199 == 3 cards */
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
         .container {
           grid-template-columns: repeat(3, 1fr);
         }
       }
 
-      /* 992-1199 == 4 cards */
-      @media screen and (min-width: 992px) and (max-width: 1199px) {
+      /* 1200-1399 ==  4 cards*/
+      @media screen and (min-width: 1200px) and (max-width: 1399px) {
         .container {
           grid-template-columns: repeat(4, 1fr);
         }
       }
 
-      /* 1200-1399 ==  5 cards*/
-      @media screen and (min-width: 1200px) and (max-width: 1399px) {
-        .container {
-          grid-template-columns: repeat(5, 1fr);
-        }
-      }
-
-      /* 1400 == 6 cards */
+      /* 1400 == 4 cards */
       @media screen and (min-width: 1400px) {
         .container {
-          grid-template-columns: repeat(6, 1fr);
+          grid-template-columns: repeat(4, 1fr);
         }
       }
 .container::after, .row::after {
