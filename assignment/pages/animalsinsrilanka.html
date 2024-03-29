@@ -63,13 +63,56 @@ html {
 }
 
 .container {
-  padding: 0 16px;
-}
+        grid-template-columns: repeat(6, 1fr);
+        display: grid;
+        gap: 30px;
+      }
+      /* 575*/
+      @media screen and (min-width: 0px) and (max-width: 575px) {
+        .container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
 
+      /* 576-767 == 2 cards */
+
+      @media screen and (min-width: 576px) and (max-width: 767px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* 768-991 == 3 cards */
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        .container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* 992-1199 == 4 cards */
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        .container {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      /* 1200-1399 ==  5 cards*/
+      @media screen and (min-width: 1200px) and (max-width: 1399px) {
+        .container {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+
+      /* 1400 == 6 cards */
+      @media screen and (min-width: 1400px) {
+        .container {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
 .container::after, .row::after {
   content: "";
   clear: both;
-  display: table;
+  /* display: table; */
 }
 
 .button {
@@ -105,7 +148,7 @@ html {
         width: 570px;
         height: 400px;
         margin: 10px;
-        background-color: rgb(198, 192, 184);
+        background-color: aliceblue;
         padding: 10px;
         border-width: 2px;
         border-radius: 10px;
@@ -182,6 +225,10 @@ html {
         <h2>PEDIGREE DOGS IN SRI LANKA</h2>
       </div>
     </div>
+  </div>
+ </div>
+   </div>
+   </div>
   </div>
 
 </table>
