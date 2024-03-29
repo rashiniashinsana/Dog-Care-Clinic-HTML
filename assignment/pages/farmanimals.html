@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Animals</title>
+    <style>
+
+        .important{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15;
+            font-style: italic;
+            display: flex;
+            text-align: left;
+            background-color: rgb(220, 244, 240);
+            align-items: center;
+           
+        }
+
+        .sentence{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17;
+            font-style: initial;
+            font-weight: bold;
+            background-color: rgb(84, 76, 71);
+        }
+
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: "popoins", sans-serif;
+
+        .header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding: 1rem 9%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 100;
+        }
+        .logo img {
+          border: 1px;
+          border-radius: 100px;
+          width: 75px;
+          height: 75px;
+        }
+        .logo:hover {
+          transform: scale(1.1);
+        }
+
+        /* .navbar a {
+          font-size: 15px;
+          color: var(--text-color);
+          margin-left: 2.5rem;
+          font-weight: 550;
+          transition: 0.3s ease-in-out;
+          border-bottom: 3px solid transparent;
+        } */
+
+        .navbar a:hover,
+        .navbar a.active {
+          color: var(--main-color);
+          border-bottom: 3px solid var(--main-color);
+        }
+      }
+
+            .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        }
+
+        .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        }
+
+
+        .navbar a.right {
+        float: right;
+        }
+
+        .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        .navbar a.active {
+        background-color: #666;
+        color: white;
+        }
+
+
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        }
+
+        html {
+        box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+        box-sizing: inherit;
+        }
+
+        .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+        }
+
+        .row{
+        background-color: #ebeaea;
+        }
+
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+        background-color: blanchedalmond;
+        
+        }
+
+        .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+
+
+        .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        }
+
+        .button:hover {
+        background-color: #555;
+        }
+
+        @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            display: block;
+        }
+        }
+
+      .home {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        height: 9vh;
+
+        .topic {
+          font-size: 2rem;
+          text-align: center;
+        }
+
+        .phr {
+          font-size: 1rem;
+          text-align: right,10px;
+          background-color: rgb(208, 236, 246);
+        }
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 5rem;
+          padding: 20px 20px 20px 20px;
+        }
+      }
+      .cat {
+        width: 1500px;
+        height: 150px;
+        padding-right: 80px;
+      }
+      .grid {
+        padding-left: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+      }
+      .right {
+        padding-right: 80px;
+      }
+      .tecnologic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+      }
+      .tec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 280px;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: repeat(4);
+        margin-right: 10px;
+      }
+      .info {
+        margin-right: 10px;
+      }
+      .h1 {
+        text-align: center;
+      }
+
+      .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            position: relative;
+            margin-top: 200px;
+            margin-left: 200px;
+            gap: 50px;
+    }
+
+    .containers{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            position: relative;
+            gap: 20px;
+    }
+
+    .Review {
+        width: 300px;
+        height: 400px;
+        background-color: rgb(182, 180, 184);
+        gap: 20px;
+        text-align: center;
+        border: 1px solid rgb(226, 133, 82);
+        
+    }
+
+    .reviews {
+        border: 1px solid rgb(255, 166, 64);
+        margin: 2px;
+        gap: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+    .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    }
+
+    .row{
+    background-color: #ebeaea;
+    
+    }
+
+    .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   
+    }
+
+    .img{
+    transition-property: all;
+    transition-duration: 5s;
+    transition-delay: 2ms;
+    }
+
+    .img:hover{
+      width: 400px;
+      height: 400px;
+      background-color: grey;
+    }
+
+     .container1 {
+        grid-template-columns: repeat(6, 1fr);
+        display: grid;
+        gap: 20px;
+      }
+      
+    .box {
+        width: 570px;
+        height: 400px;
+        margin: 10px;
+        background-color: rgb(247, 245, 242);
+        padding: 10px;
+        border-width: 2px;
+        border-radius: 10px;
+        border-color: rgb(5, 6, 4);
+      }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">  
+        <a href="index.html" class="active" style="text-decoration: none;color: aqua;">HOME</a>
+        <a href="animalsinsrilanka.html" class="active" style="text-decoration: none;color: aqua;">ANIMALS IN SRI LANKA</a>
+        <a href="aboutus.html" class="active" style="text-decoration: none;color:aqua ;">ABOUT US</a>
+        <a href="clinic.html" class="active" style="text-decoration: none;color:aqua;">CLINIC</a>
+        <a href="ourprojects.html" class="active" style="text-decoration: none;color: aqua;">OUR PROJECTS</a>
+        <a href="contacts.html" class="active" style="text-decoration: none;color: aqua;">CONTACTS</a>
+   </div>
+  <div class="about-section" style="background-color: peachpuff;">
+    <img src="/assignment/assets/icons8-dog-100.png" alt="dog" >
+  <h2 style="color:darkorange;">DOG CARE CLINIC - MIHIRIPENNA THALPE _ SRI LANKA</h2>
+  <h5 style=" font-family: 'Arial Narrow', Arial, sans-serif;">Help Us to Help</h5>
+    
+</div>
+
+
+    
+    <div style="background-color: rgb(119, 216, 214);">
+        <br><h2>UNGULATES</h2></div><br>
+        <hr style="color: darkorange;">
+
+    
+        <div style="background-color: rgb(179, 220, 255);">
+            <hr>
+      <h3 style="color:darkorange;">FARM ANIMALS</h3>
+      <br>
+    </div>
+      
+      
+
+     <div class="row">
+              <h2>
+                <span class="important" style="color: rgb(255, 142, 122);;">
+                    <br><br>
+                    All animals deserve a happy life !
+                    <br>Please help us make this a reality !
+                </span>
+            </h2>
+            <br>
+
+        </div>
+
+ <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Rudi_2021-05-22__17__DCC_89082b0ae2.jpg" alt="Fieldclinic" style="width:100%">
+      <div class="container">
+             Despite growing awareness of the issue, there remains a lack of effective regulation and enforcement
+            to combat the cruelty of puppy mills. Many of these operations operate under the radar, making it 
+            difficult for authorities to monitor and shut them down. Additionally, consumers continue to fuel
+             the demand for pedigree dogs without considering the ethical implications of where these dogs come from.
+            It is imperative that governments enact and enforce stricter laws to regulate dog breeding practices,
+             while also educating the public about the importance of adopting from shelters or reputable breeders
+             who prioritize the health and welfare of their animals. Only through collective action can we hope to put an end to the suffering inflicted upon countless dogs in puppy mills around the world</p>
+        
+
+
+<span style="color: darkorange; font-style: italic;" > Please help us to help !</span>
+
+
+               
+<br>
+<br>
+
+      </div>
+    </div>
+  </div>
+
+  
+   <div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_csm_Rassehunde_14955cf448_77ee87fedc.jpg" alt="dailytour" style="width:100%">
+      <div class="container">
+          <p>The conditions in many puppy mills are appalling and unacceptable. 
+            Breeding dogs are often kept in cramped and unsanitary conditions,
+            deprived of proper medical care, socialization, and even basic necessities
+            like clean water and adequate food. These dogs are treated as mere breeding machines, 
+            forced to produce litter after litter without regard for their physical and emotional well-being.
+            As a result, they suffer from a range of health issues, including genetic disorders, infections,
+            and behavioral problems, which are passed on to their offspring, perpetuating a cycle of suffering.
+
+           
+      </div>
+      </div>
+  </div>
+  
+
+ <div><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_csm_Rassehunde_14955cf448_77ee87fedc.jpg" alt="rehome" style="width: 400px;height: 300px;">
+      
+
+        <p>Pedigree dogs are often bought for status reasons. German shepherds, Dobermans, 
+            Rottweilers and Great Danes are especially popular. Big and strong dogs that make
+             the owners feel powerful and important. <br>
+            Sadly, there are no regulations controlling breeders and the dogs are bred under horrific conditions.
+            In so called puppy mills bitches have to produce litter after litter. Nobody checks their health condition.
+
+            The puppies are separated from their mothers way too early and the result 
+            are pedigree dogs with an extremely weak immune system. Many are already 
+            born with genetic disorders and are prone for diseases. In the beginning, 
+            the owners are still eager to get their pets treated but soon it becomes too
+            "stressful" and too expensive. The dogs are just dumped and left to their fate.
+
+            We find these abandoned souls in horrific condition and often 
+            it is already too late. Other dogs can be saved with weeks of 
+            intensive care but get sick again and again. It is heartbreaking.
+
+            There is a huge lack of awareness on this topic among the local population.
+
+<span style="color: darkorange; font-style: italic;" > Please help us to help !</span></p> 
+</div> 
+
+    
+</table>
+</div>
+
+
+</table>
+</div>
+
+</div>
+
+  
+      <br>
+      <br>
+             <div class="home-content">
+      <div class="container">
+        <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Günther_2023-08-21__3__d36672f325.jpg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    Günther is the first baby goat born at the Dog Care Clinic.
+                </p>
+                
+            </div>
+        </div>
+
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Casandra_2023-07-28__1__e43e795495.jpg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    Marry came to us together with mother Cassandra. Although she was still a foal, Marry already had to work hard and carry heavy loads.
+                </p>
+                
+            </div>
+        </div>
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Rudi_2023-01-03__3__DCC_31f08004c9.jpg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    Rudi is the first farm animal that we have admitted to the Dog Care Clinic.
+                </p>
+                
+            </div>
+        </div>
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Elsa_2023-04-20_311fc46b30.jpeg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    Elsa is the late arrival in our herd of goats.She had an owner who was getting too old to continue his care for her.
+                </p>
+                
+            </div>
+        </div>
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Alma_2023-04-21_at_04.35.18_73e4a18468.jpeg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    When we rescued Alma, she was standing with her calf in the dirty driveway to the slaughterhouse - with a view of the conspecifics who had already been killed.
+                </p>
+                
+            </div>
+        </div>
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Meckie_2023-04-21_at_04.55__1__5cf2b1997d.jpeg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    Without the DCC, Meckie would not be alive today. Her fate seemed sealed when we rescued her from the slaughterhouse along with four other Nubian goats.
+                </p>
+                
+            </div>
+        </div>
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Marley1_05954b5223.jpg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    In March 2023 we rescued five goats from the slaughterhouse. Marley was part of the herd.
+                </p>
+                
+            </div>
+        </div>
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Resi_2023-04-24_b8a072bbee.jpeg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    It was a special moment when Emma lay down during the midday feeding to give birth to her calf.
+                </p>
+                
+            </div>
+        </div>
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Casandra_2023-07-28__1__e43e795495.jpg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    Cassandra was used to carry heavy loads. She was burdened way too much and when we learned about her situation, it was clear that we had to rescue her.
+                </p>
+                
+            </div>
+        </div>
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Bob_2023-03-17__2__849228fa90.jpg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    Goats are herd animals with a clear hierarchy. Bob is the boss of our herd.
+                </p>
+                
+            </div>
+        </div>
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_Salsa_2023-04-21_at_04.35.18__1__6f1da82a1b.jpeg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    Salsa is the only male calf in the DCC. He came to us with his mother Wilma and seven other cows in a large rescue operation.
+                </p>
+                
+            </div>
+        </div>
+         <div class="Review"><img src="/assignment/assets/DOG CARE/animals in sri lanka/csm_WhatsApp_Image_2023-04-21_at_04.55.29_0c8c6a9610.jpeg" alt="" width="100%">
+            <div>
+                <p class="reviews">
+                    For Marina Möbius' birthday, the DCC team came up with something very special.
+                </p>
+            </div>
+        </div>  
+    </div>
+    </div>
+<footer class="footer">
+        <div class="social-footer">
+        
+            <div style="background-color:rgb(229, 235, 240);" class="container1 ">
+              <div class="box"> 
+                <a target="blank" href="http://www.facebook.com/pages/Dog-Care-Clinic-eV/133231863354785" class="facebook" title="facebook" ><img src="/assignment/assets/icons8-facebook-50.png" alt="none"></a>
+                <br>
+                <h3>CONTACT SL</h3>
+                <h3>CONTACT DOG CARE CLINIC e.V. Kronenstr</h3>
+                <a target="blank" href="E-Mail: info@dogcare-clinic.com" style="color: blue;">E-Mail: info@dogcare-clinic.com</a>
+                <h3>How You may HELP</h3>» One-off donations 
+              </div>
+              <div class="box">
+                <a target="blank" href="http://twitter.com/DOGCARECLINIC" class="twitter" title="twitter"><img src="/assignment/assets/icons8-twitter-50.png" alt="none"></a>
+                <br>
+                <a target="blank" href="https://www.dogcare-clinic.com/" style="color: blue;">dcc_srilanka@dogcare-clinic.com</a>
+                <br>
+                <h2> 3478054 VS-Schwenningen Germany </h2>
+                 
+                  <br>
+                  <h5> » Become a sponsor</h5>
+                 
+              </div>
+              <div class="box">
+                <a target="blank" href="https://www.youtube.com/user/DogCareCliniceV" class="youtube" title="youtube"><img src="/assignment/assets/icons8-youtube-logo-50.png" alt="none"></a>
+                 <br>
+                 <a target="blank" href="contacts.html" style="color: blue;">more contact details</a>
+                 <h3> Telefon (+49) 07720 - 99767-0</h3>
+                 <br> 
+                 <h3></h3>Fax (+49) 07720 - 99767-16
+                 » Help wo. paying a Cent
+              </div>
+
+        </div>
+        <p>&copy; 2024 Dog Care Clinic. All rights reserved.</p>
+        </div>
+        
+       
+    </footer>
+      
+     
+</body>
+</html>
+
+
+
+
