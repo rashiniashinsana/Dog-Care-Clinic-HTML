@@ -228,15 +228,61 @@
         text-align: center;
       }
 
-      .container {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            position: relative;
-            margin-top: 200px;
-            margin-left: 200px;
-            gap: 50px;
-    }
+      
+
+    .container {
+        grid-template-columns: repeat(6, 1fr);
+        display: grid;
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: relative;
+        margin-top: 100px;
+        margin-left: 100px;
+      }
+      /* 575*/
+      @media screen and (min-width: 0px) and (max-width: 575px) {
+        .container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      /* 576-767 == 2 cards */
+
+      @media screen and (min-width: 576px) and (max-width: 767px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* 768-991 == 3 cards */
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        .container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* 992-1199 == 4 cards */
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        .container {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      /* 1200-1399 ==  5 cards*/
+      @media screen and (min-width: 1200px) and (max-width: 1399px) {
+        .container {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+
+      /* 1400 == 6 cards */
+      @media screen and (min-width: 1400px) {
+        .container {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+
 
     .containers{
             display: flex;
@@ -364,44 +410,8 @@
     </div>  
   </div>
   </div> 
-     <div class="card">
-      <img src="/assignment/assets/pAssets/SofA.jpg" alt="Fieldclinic" style="width:100%">
-      <div class="container">
-      </div>
-        <p class="phr">
-            <br>
-           We have been able to accept farm animals in the Dog Care Clinic since 2021.
-           <br><br>
-                <span style="">W</span>e have created a separate area for them and 
-                have employees who only look after our ungulates. 
-                The cows are led to fresh grass every day and 
-                are also given concentrated feed as well as fruit and vegetables.
-                <br><br>
-                The animals that come to us are very emaciated,
-                disabled or injured and have to be nursed up for many months.
-          </p>
-    </div> 
-     <div class="card">
-      <img src="/assignment/assets/pAssets/SofA.jpg" alt="Fieldclinic" style="width:100%">
-      <div class="container">
-      </div>
-        <p class="phr">
-            <br>
-           We have been able to accept farm animals in the Dog Care Clinic since 2021.
-           <br><br>
-                <span style="">W</span>e have created a separate area for them and 
-                have employees who only look after our ungulates. 
-                The cows are led to fresh grass every day and 
-                are also given concentrated feed as well as fruit and vegetables.
-                <br><br>
-                The animals that come to us are very emaciated,
-                disabled or injured and have to be nursed up for many months.
-          </p>
-    </div>
   </div>
-</div>
-</div>
-</div>        
+       
 
 
 
